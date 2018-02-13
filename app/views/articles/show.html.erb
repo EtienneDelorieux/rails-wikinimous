@@ -2,6 +2,8 @@
 
 <p class="show__article--content"><%= @article.content %></p>
 
-<%= fa_icon "edit" %> <%= link_to "Edit this article", edit_article_path %>
+<%= fa_icon "trash" %> <%= link_to "Delete this article", article_path, method: :delete, data: { confirm: "Are you sure?" } %>
+
+<%= fa_icon "edit" %> <%= link_to "Edit this article", article_path %>
 
 <%= fa_icon "undo" %> <%= link_to "Back to the list", index_path %>
